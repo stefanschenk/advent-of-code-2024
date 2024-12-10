@@ -39,8 +39,9 @@ def calculate_antinodes():
 
     return set(filter(sanitize, antinodes))
 
-scan_map()
-detect_antenna_pairs()
-antinodes = calculate_antinodes()
+if __name__ == "__main__":
+    scan_map()
+    detect_antenna_pairs()
+    antinodes = calculate_antinodes()
 
-print(len(antinodes))
+    print(len(antinodes))
