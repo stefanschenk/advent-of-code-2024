@@ -54,3 +54,4 @@ if __name__ == "__main__":
     score = score_trails(possible_trails, all_routes)
 
     print('Score? ', score)
+    print('Trailrating? ', print(len(possible_trails))) # part 2 answer
