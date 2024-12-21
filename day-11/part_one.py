@@ -1,5 +1,7 @@
 # input = '0 1 10 99 999' # example 1
 # input = '125 17' # example 2
+from util import timed
+
 input = '572556 22 0 528 4679021 1 10725 2790' # puzzle input
 
 class Stone:
@@ -60,8 +62,8 @@ def apply_rule(stone: Stone, set_of_stones:list[Stone]) -> list[Stone]:
 
     return set_of_stones
 
-
-if __name__ == "__main__":
+@timed
+def main():
     stones = read_input()
 
     for i in range(25):
@@ -70,3 +72,7 @@ if __name__ == "__main__":
             apply_rule(stone, stones)
 
     print('Number of stones? ', len(stones)) # this takes around 15 mins to calculate
+
+
+if __name__ == "__main__":
+    main()
